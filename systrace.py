@@ -57,10 +57,10 @@ def add_adb_serial(command, serial):
     command.insert(1, '-s')
 
 def main():
-  device_sdk_version = get_device_sdk_version()
-  if device_sdk_version < 18:
-    legacy_script = os.path.join(os.path.dirname(sys.argv[0]), 'systrace-legacy.py')
-    os.execv(legacy_script, sys.argv)
+#  device_sdk_version = get_device_sdk_version()
+#  if device_sdk_version < 18:
+#    legacy_script = os.path.join(os.path.dirname(sys.argv[0]), 'systrace-legacy.py')
+#    os.execv(legacy_script, sys.argv)
 
   usage = "Usage: %prog [options] [category1 [category2 ...]]"
   desc = "Example: %prog -b 32768 -t 15 gfx input view sched freq"
